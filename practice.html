@@ -1,0 +1,77 @@
+<html>
+<head>
+<style>
+body{
+justify-items:center;
+align-content:center;
+}
+.parent {
+    color: white;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.text {
+    color: lime;
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.text span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textChange 4s infinite;
+}
+
+.text .designer {
+    animation-delay: 0s;
+}
+
+.text .developer {
+    animation-delay: 2s;
+}
+
+@keyframes textChange {
+    0% {
+        opacity: 0;
+        transform: translatex(20px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    45% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+</style>
+</head>
+<body>
+<div class="parent">
+    I am a
+    <span class="text">
+        <span class="designer">Web Designer</span>
+        <span class="developer">Web Development</span>
+    </span>
+</div>
+</body>
+</html>
